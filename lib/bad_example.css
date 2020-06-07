@@ -1,4 +1,4 @@
-/* body {
+body {
     padding: 10px; 
   color: #000;
   padding-left: 30px
@@ -12,6 +12,7 @@
     background-image: linear-gradient(to top,#838383 ,#54575a,#8a8a8a);
     width: 1000px;
     border-radius: 5px;
+    width: 0px;
     border: none;
     height: 40px;
     cursor: pointer;
@@ -27,4 +28,4 @@
 
 rr
 ss
-mm */
+mm 

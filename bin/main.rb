@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/css_checker.rb'
 require_relative '../lib/load.rb'
 require 'colorize'
