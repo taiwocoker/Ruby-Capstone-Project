@@ -6,6 +6,7 @@ module CssChecker
 
     if lines.size.positive?
       check = Load.new
+      check.new_line_check(lines,errors)
       check.space_after_comma_check(lines,errors)
       check.trailing_space_check(lines, errors)
       check.last_line_check(lines,errors)

@@ -8,8 +8,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-items: center;
-    justify-content: center;
+    justify-items: center;justify-content: center;
     background-image: linear-gradient(to top,#838383,#54575a,#8a8a8a);
     width: 1000px;
     border-radius: 5px;

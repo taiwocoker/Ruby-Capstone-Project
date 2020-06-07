@@ -18,7 +18,14 @@ module CheckSpace
           errors << "Expected single space after comma on line #{index + 1}" unless line =~ /[[:space:]]\,/
         end
         errors
-      end
+    end
+
+    def new_line_check(lines, errors)
+        lines.each_with_index do |line, index|
+          errors << "Expected newline after semi-colon on line #{index + 1}." if line.end_with?("; \n")
+        end
+        errors
+    end
     
     # rubocop:enable Metrics/CyclomaticComplexity
 end
