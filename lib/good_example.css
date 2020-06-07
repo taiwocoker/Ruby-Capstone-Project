@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  body {
+    line-height: 1.4;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+  }
+  
+  main {
+    width: 100%;
+  }
+  
+  header {
+    background: url(images/your_verse_hero.jpg) 50% 100% no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+  }
+  
+  .nav-bar {
+    margin-left: -80px;
+    margin-top: 20px;
+  }
+  
+  .nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top, #838383, #54575a, #8a8a8a);
+    width: 1000px;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .nav-bar ul li {
+    display: flex;
+    border: 1px solid grey;
+    height: 30px;
+    width: 400px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  footer a {
+    font-size: 9px;
+    color: #99b3ff;
+  }
+  
+  .nav-bar ul li a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-bar ul #search {
+    justify-content: start;
+    text-align: start;
+    justify-items: start;
+    display: flex;
+    border: 2px solid #838383;
+    border-radius: 10px;
+    margin: 30px;
+  }
+  
+  .nav-bar ul li:hover {
+    background-color: #413f3f;
+  }
+  
+  .verses {
+    margin-top: 120px;
+    align-items: center;
+  }
+  
+  .verses img {
+    width: 800px;
+  }
+  
+  .verses .verse-small {
+    background-image: url(https://archive.fo/UW4oR/7c09e7d0a510ee61a62275a115208926bbd7002a.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .verses .verse-small:hover {
+    background-image: url(https://archive.fo/UW4oR/7c09e7d0a510ee61a62275a115208926bbd7002a.png);
+    background-position: 50% 100%;
+  }
+  
+  .verses .verse-head {
+    width: 80px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 110px;
+  }
+  
+  .verses .verse-medium {
+    margin-left: 70px;
+  }
+  
+  .four-images {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0 0 10px 0;
+    max-width: 1440px;
+  }
+  
+  .four-images img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  footer {
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .footer-content {
+    margin-bottom: 10px;
+  }
+  
+  .content-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: row;
+    padding-right: 0 3px;
+  }
+  
+  .links h6 {
+    padding: 0 3px;
+  }
+  
