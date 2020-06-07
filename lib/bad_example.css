@@ -4,6 +4,20 @@
   padding-left: 30px
 }
 
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top,#838383,#54575a,#8a8a8a);
+    width: 1000px;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+  }
+
 
 
 
@@ -13,5 +27,5 @@
 
 
 rr
-hh
-jj */
+ss
+mm */
