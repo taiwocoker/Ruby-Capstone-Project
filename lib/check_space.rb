@@ -17,7 +17,7 @@ module CheckSpace # rubocop:todo Style/Documentation
     lines.each_with_index do |line, index|
       next unless line.include?(',')
 
-      errors << "Expected single space after comma on line #{index + 1}" unless line =~ /[[:space:]]\,/
+      errors << "A single space is expected after comma on line #{index + 1}" if line =~ /[\,][\s]{0}[\#]/
     end
     errors
   end
@@ -26,7 +26,7 @@ module CheckSpace # rubocop:todo Style/Documentation
     lines.each_with_index do |line, index|
       next unless line.include?(',')
 
-      errors << "Unexpected whitespace before comma on line #{index + 1}" unless line =~ /\,[[:space:]]/
+      errors << "Unexpected whitespace before comma on line #{index + 1}" if line =~ /[[:space:]][\,]/
     end
     errors
   end
@@ -36,10 +36,8 @@ module CheckSpace # rubocop:todo Style/Documentation
       next if line.start_with?('@') || line == "\n" || line.end_with?(",\n")
       next if ['{', '}'].any? { |needle| line.include? needle }
 
-      num_of_spaces = line[/\A */].size
-      if num_of_spaces < 2 || num_of_spaces > 2
-        errors << "Indentation of 2 spaces expected.
-              Found #{num_of_spaces} spaces instead on line #{index + 1}."
+      if !line.match?(/\A\s{2}[a-z]/) && line.match?(/\;/)
+        errors << "Indentation of 2 spaces expected.\n Found spaces on line #{index + 1}."
       end
     end
     errors
@@ -47,7 +45,7 @@ module CheckSpace # rubocop:todo Style/Documentation
 
   def new_line_check(lines, errors)
     lines.each_with_index do |line, index|
-      errors << "Expected newline after semi-colon on line #{index + 1}." if line.end_with?("; \n")
+      errors << "Expected newline after semi-colon on line #{index + 1}." if line.match?(/[a-z][\;][\s*][a-z]/)
     end
     errors
   end

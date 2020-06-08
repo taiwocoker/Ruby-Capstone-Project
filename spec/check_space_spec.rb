@@ -3,10 +3,12 @@
 require_relative '../lib/load.rb'
 require_relative '../lib/check_space.rb'
 
-describe CheckSpace do
+describe CheckSpace do # rubocop:todo Metrics/BlockLength
   let(:check) { Load.new }
+  let(:bad_lines) { ['#head{', "padding: 10px; \n", '}'] }
   let(:good_lines) { ['#head {', '  padding: 10px;', '}', "\n"] }
-  let(:bad_lines) { ['#head{', "padding: 10px;background-image: linear-gradient(to top,#838383 ,#54575a,#8a8a8a; \n",'}'] }
+  let(:no_new_lines) { ['#head {', '  justify-items: center; justify-content: center;', '}'] }
+  let(:zero_px_lines) { ['.game {', 'padding: 0', 'margin: 0px;', '}'] }
   let(:errors) { [] }
 
   describe 'trailing_space_check' do
@@ -21,15 +23,15 @@ describe CheckSpace do
     end
   end
 
-  describe 'space_after_comma_check' do
-    it 'should return an empty array if a single space after comma is not found' do
-      expect(check.space_after_comma_check(good_lines, errors))
+  describe 'indentation_check' do
+    it 'should return an empty array if there is an indentation of 2 spaces' do
+      expect(check.indentation_check(good_lines, errors))
         .to eql([])
     end
 
-    it 'should return an error message if there is no single space after the comma' do
-      expect(check.space_after_comma_check(bad_lines, errors))
-        .to eql(['There should be a space after the comma on line 2'])
+    it 'should return an error message if there is no space before the opening bracket' do
+      expect(check.indentation_check(bad_lines, errors))
+        .to eql(["Indentation of 2 spaces expected.\n Found spaces on line 2."])
     end
   end
 
@@ -45,19 +47,27 @@ describe CheckSpace do
     end
   end
 
-  describe 'unexpected_white_space_check' do
-    it 'should return an empty array if there are no spaces before the comma' do
-      expect(check.unexpected_white_space_check(good_lines, errors))
+  describe 'new_line_check' do
+    it 'should return nil if the syntax is okay' do
+      expect(check.new_line_check(good_lines, errors))
         .to eql([])
     end
 
-    it 'should return an error message if spaces are found' do
-      expect(check.unexpected_white_space_check(bad_lines, errors))
-        .to eql(['Trailing space found on line 2.'])
+    it 'should return an error message if the syntax is not okay' do
+      expect(check.new_line_check(no_new_lines, errors))
+        .to eql(['Expected newline after semi-colon on line 2.'])
     end
   end
 
+  describe 'zero_px_check' do
+    it 'should return nil if the syntax is okay' do
+      expect(check.zero_px_check(good_lines, errors))
+        .to eql([])
+    end
 
-  
-
+    it 'should return an error message if the syntax is not okay' do
+      expect(check.zero_px_check(zero_px_lines, errors))
+        .to eql(["Zero values don't need units on line 3."])
+    end
+  end
 end
