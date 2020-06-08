@@ -1,15 +1,35 @@
 body {
-    padding: 10px; 
+    padding: 10px; background-image: linear-gradient(to top,#838383 ,#54575a,#8a8a8a);
   color: #000;
   padding-left: 30px
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .nav-bar ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-items: center;justify-content: center;
-    background-image: linear-gradient(to top,#838383 ,#54575a,#8a8a8a);
+    justify-items: center;
+    justify-content: center;
+    
     width: 1000px;
     border-radius: 5px;
     width: 0px;
@@ -17,15 +37,3 @@ body {
     height: 40px;
     cursor: pointer;
   }
-
-
-
-
-
-
-
-
-
-rr
-ss
-mm 

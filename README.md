@@ -27,7 +27,7 @@ Screenshot of linter passing with no errors
 screenshot
 
 Screenshot of linter displaying errors
-screenshot
+
 
 ## Getting Started
 # Prerequisites
@@ -77,3 +77,6 @@ To get a local copy up and running follow these simple example steps.
 
 ## Show your support
   Give a ⭐️ if you like this project!
+
+## Acknowledgments
+  Odin Project
