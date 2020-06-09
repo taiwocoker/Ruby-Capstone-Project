@@ -4,7 +4,6 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "bad_example.css"
-    - "spec/check_space_spec.rb"
   DisplayCopNames: true
 Layout/LineLength:
   Max: 120
