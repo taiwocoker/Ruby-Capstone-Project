@@ -11,13 +11,13 @@ This is a CSS lint tool built as a Microverse Ruby capstone project.
 ## Description
   This linter promotes best CSS practices by checking for:
 
-  *Unwanted trailing spaces at the end of lines in a file.
-  *Indentation of 2 spaces at the beginning of lines where necessary.
-  *Empty line at the end of the file.
-  *Spaces after comma.
-  *Unexpected white space before comma.
-  *Expected newline after semi-colon.
-  *Zero values don't need units.
+  * Unwanted trailing spaces at the end of lines in a file.
+  * Indentation of 2 spaces at the beginning of lines where necessary.
+  * Empty line at the end of the file.
+  * Spaces after comma.
+  * Unexpected white space before comma.
+  * Expected newline after semi-colon.
+  * Zero values don't need units.
 
 ## Live Demo
     Click [here](https://www.loom.com/share/83e4bc18ff7442f7b3f84cee84c0d13e) in order to see a Live Demo of this project.
@@ -32,19 +32,19 @@ This is a CSS lint tool built as a Microverse Ruby capstone project.
 
 ## Getting Started
 # Prerequisites
-  *Terminal/Command Prompt.
-  *CSS stylesheets to run linter on.
+  * Terminal/Command Prompt.
+  * CSS stylesheets to run linter on.
 
 ## Instructions
 # Setup
 
 To get a local copy up and running follow these simple example steps.
 
-  *Download repository files.
+  * Download repository files.
 
-  *Open up a terminal session.
+  * Open up a terminal session.
 
-  *In your terminal, change directory into the ruby-capstone-project/bin folder.
+  * In your terminal, change directory into the ruby-capstone-project/bin folder.
     ruby bin/main.rb lib/good_example.css or lib/bad_example.css will do the trick! 😉
 
 ## Good and Bad Code Examples
