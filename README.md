@@ -77,12 +77,12 @@ This is a CSS lint tool built as a Microverse Ruby capstone project.
 After setting up the repo and installing the colorize gem, run the following command to execute the linter in the repo directory on your commandline,
 
 
-  ./bin/main.rb <filename_tocheck.rb>
+  ruby bin/main.rb <filename_tocheck.css>
 
 In this case a sample file is created for the reviewers to check the code,
 
 
-  ./bin/main.rb lib/bad_examples.css
+  ruby bin/main.rb lib/bad_examples.css
 
 ## Good and Bad Code Examples
 # Good Code Example
