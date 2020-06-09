@@ -20,7 +20,7 @@ This is a CSS lint tool built as a Microverse Ruby capstone project.
   * Zero values don't need units.
 
 ## Live Demo
-    Click [here](https://www.loom.com/share/83e4bc18ff7442f7b3f84cee84c0d13e) in order to see a Live Demo of this project.
+  Click [here](https://www.loom.com/share/83e4bc18ff7442f7b3f84cee84c0d13e) in order to see a Live Demo of this project.
 
 ## Screenshots
 # Screenshot of linter passing with no errors
