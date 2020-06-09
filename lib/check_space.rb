@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-module CheckSpace # rubocop:todo Style/Documentation
+module CheckSpace
   # rubocop:disable Metrics/CyclomaticComplexity
   def trailing_space_check(lines, errors)
     lines.each_with_index do |line, index|

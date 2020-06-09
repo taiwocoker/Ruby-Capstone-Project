@@ -1,7 +1,5 @@
-# frozen_string_literal: true
-
 require_relative '../lib/check_space.rb'
 
-class Load # rubocop:todo Style/Documentation
+class Load
   include CheckSpace
 end

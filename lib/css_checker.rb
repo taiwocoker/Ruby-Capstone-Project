@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
 require_relative '../lib/load.rb'
-module CssChecker # rubocop:todo Style/Documentation
-  def self.check(file) # rubocop:todo Metrics/MethodLength
+module CssChecker
+  def self.check(file)
     errors = []
     lines = File.open(file).to_a
 

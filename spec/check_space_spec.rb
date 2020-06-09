@@ -1,9 +1,7 @@
-# frozen_string_literal: true
-
 require_relative '../lib/load.rb'
 require_relative '../lib/check_space.rb'
 
-describe CheckSpace do # rubocop:todo Metrics/BlockLength
+describe CheckSpace do
   let(:check) { Load.new }
   let(:bad_lines) { ['#head{', "padding: 10px; \n", '}'] }
   let(:good_lines) { ['#head {', '  padding: 10px;', '}', "\n"] }
