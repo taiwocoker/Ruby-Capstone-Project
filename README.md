@@ -23,10 +23,11 @@ This is a CSS lint tool built as a Microverse Ruby capstone project.
     Click [here] (https://link) in order to see a Live Demo of this project.
 
 ## Screenshots
-Screenshot of linter passing with no errors
-screenshot
+# Screenshot of linter passing with no errors
+![screenshot](images/good_test.PNG)
 
-Screenshot of linter displaying errors
+# Screenshot of linter displaying errors
+![screenshot](images/bad_test.PNG)
 
 
 ## Getting Started
