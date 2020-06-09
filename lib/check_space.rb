@@ -34,8 +34,9 @@ module CheckSpace
       next if line.start_with?('@') || line == "\n" || line.end_with?(",\n")
       next if ['{', '}'].any? { |needle| line.include? needle }
 
-      if !line.match?(/\A\s{2}[a-z]/) && line.match?(/\;/)
-        errors << "Indentation of 2 spaces expected.\n Found spaces on line #{index + 1}."
+      num_of_spaces = line[/\A */].size
+      if num_of_spaces < 2 || num_of_spaces > 2
+        errors << "Indentation of 2 spaces expected. Found #{num_of_spaces} spaces instead on line #{index + 1}."
       end
     end
     errors

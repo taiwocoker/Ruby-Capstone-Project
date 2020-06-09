@@ -1,7 +1,7 @@
 require_relative '../lib/load.rb'
-require_relative '../lib/check_space.rb'
+require_relative '../lib/css_checker.rb'
 
-describe CheckSpace do
+describe CssChecker do
   let(:check) { Load.new }
   let(:bad_lines) { ['#head{', "padding: 10px; \n", '}'] }
   let(:good_lines) { ['#head {', '  padding: 10px;', '}', "\n"] }
@@ -29,7 +29,7 @@ describe CheckSpace do
 
     it 'should return an error message if there is no space before the opening bracket' do
       expect(check.indentation_check(bad_lines, errors))
-        .to eql(["Indentation of 2 spaces expected.\n Found spaces on line 2."])
+        .to eql(['Indentation of 2 spaces expected. Found 0 spaces instead on line 2.'])
     end
   end
 

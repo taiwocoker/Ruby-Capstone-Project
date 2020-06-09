@@ -38,30 +38,71 @@ This is a CSS lint tool built as a Microverse Ruby capstone project.
 ## Instructions
 # Setup
 
-To get a local copy up and running follow these simple example steps.
+## How to Install
+# Downloading
 
-  * Download repository files.
+1- Download this repository,
 
-  * Open up a terminal session.
+2- Unpack it,
 
-  * In your terminal, change directory into the ruby-capstone-project/bin folder.
-    ruby bin/main.rb lib/good_example.css or lib/bad_example.css will do the trick! 😉
+3- Copy its address,
+
+4- Open your terminal commandline,
+
+5- Write "cd" and paste the address of the folder that you unpacked the repo
+
+6- ⚠️ TO EXECUTE THE FILE WITHOUT ANY ERROR INSTALL COLORIZE GEM: ⚠️
+
+
+  gem install colorize
+
+## Cloning
+
+1- Copy repo address,
+
+
+  https://github.com/taiwocoker/Ruby-Capstone-Project.git
+
+2- Open your terminal commandline,
+
+3- Run git clone,
+
+
+  git clone https://github.com/taiwocoker/Ruby-Capstone-Project.git
+
+4- ⚠️ TO EXECUTE THE FILE WITHOUT ANY ERROR INSTALL COLORIZE GEM: ⚠️
+          gem install colorize
+
+##     How to Use
+After setting up the repo and installing the colorize gem, run the following command to execute the linter in the repo directory on your commandline,
+
+
+  ./bin/main.rb <filename_tocheck.rb>
+
+In this case a sample file is created for the reviewers to check the code,
+
+
+  ./bin/main.rb lib/bad_examples.css
 
 ## Good and Bad Code Examples
 # Good Code Example
   Here is an example of good code with correct usage of syntax, spaces and indentation.
 
-.section {
-  height: 5rem;
-  width: 2rem;
+body {
+  line-height: 1.4;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: grey;
 }
 
 # Bad Code Example
  Here is an example of poorly written code with incorrect usage of syntax, spaces and indentation.
 
-.section{
-    height: 2rem
-  width: 1rem;}
+body {
+    padding: 10px; 
+   color: #000;
+   padding-left: 30px; margin-left: 30px;
+}
 
 
 ## Author
