@@ -8,7 +8,7 @@ GEM
       ast (~> 2.4.0)
     rainbow (3.0.0)
     regexp_parser (1.7.1)
-    rexml (3.2.4)
+    rexml (3.2.5)
     rubocop (0.85.1)
       parallel (~> 1.10)
       parser (>= 2.7.0.1)
@@ -25,6 +25,7 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   colorize
